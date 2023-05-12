@@ -10,9 +10,11 @@ import {
   StyledLayoutText,
 } from "./style";
 import { useCallback } from "react";
+import { useGetAnswer } from "../../services/question/question-query";
 
 const Finish = () => {
   const { navigate } = useRouter();
+  const { data } = useGetAnswer();
 
   const onClickButton = useCallback(() => {
     navigate(paths.home());
@@ -27,6 +29,14 @@ const Finish = () => {
           <Text size={"12px"} color={GRAY_565656}>
             ระบบจะนำคำตอบของคุณไปพัฒนาต่อไป
           </Text>
+          <br />
+          {data?.map((d) => {
+            return (
+              <Text size={"12px"} color={GRAY_565656}>
+                {`{ id: ${d.id}, value: ${d.value}}`}
+              </Text>
+            );
+          })}
         </StyledLayoutText>
       </ContainerNotFound>
 
