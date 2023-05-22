@@ -4,6 +4,8 @@ export type QuestionCardType = {
   description: string;
   type: number;
   option: QuestionOptionType[];
+  divider?: boolean;
+  index?: number;
 };
 
 export type QuestionType = {};

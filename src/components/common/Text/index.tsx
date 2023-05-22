@@ -1,14 +1,14 @@
 import { Typography } from "@mui/material";
 import { TextProps } from "./type";
-import { BLACK_212121 } from "../../../constants/colors";
 const Text = (props: TextProps) => {
   const {
     children,
     className,
-    color = BLACK_212121,
+    color = "black",
     lineHeight = "24px",
     size = "16px",
     weight = 400,
+    type = "Regular",
   } = props;
   return (
     <Typography
@@ -17,6 +17,7 @@ const Text = (props: TextProps) => {
       fontWeight={weight}
       lineHeight={lineHeight}
       fontSize={size}
+      fontFamily={["-apple-system", `KrungthaiFast-${type}`].join(",")}
     >
       {children}
     </Typography>

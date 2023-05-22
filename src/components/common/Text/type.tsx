@@ -5,4 +5,5 @@ export type TextProps = {
   lineHeight?: string;
   size?: string;
   weight?: number;
+  type?: "Bold" | "Light" | "Regular" | "UltraLight";
 };

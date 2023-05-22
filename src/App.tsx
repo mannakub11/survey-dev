@@ -19,7 +19,8 @@ const App = () => {
   const isInitial = useRef(false);
 
   useEffect(() => {
-    document.title = "Chart History";
+    document.body.style.overflow = "hidden";
+    document.title = "Survey";
   }, []);
 
   const handleOnError = useCallback((error: any) => {
@@ -50,7 +51,7 @@ const App = () => {
       <BrowserRouter>
         <ThemeProvider theme={Theme}>
           <Routes />
-          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+          <ReactQueryDevtools initialIsOpen={false} />
         </ThemeProvider>
       </BrowserRouter>
     </QueryClientProvider>

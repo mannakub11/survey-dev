@@ -1,14 +1,13 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { useRouter } from "../../utils/helper";
-
-import Questions from "../../components/Questions";
+import SurveyBOT from "../SurveyBOT";
 import { Container } from "./style";
 
 const Home = () => {
   return (
-    <Container>
-      <Questions />
-    </Container>
+    <>
+      <Container>
+        <SurveyBOT />
+      </Container>
+    </>
   );
 };
 export default Home;
